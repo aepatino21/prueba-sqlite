@@ -1,4 +1,4 @@
-import read_data
+import operations
 
 # Global variables
 isRunning = True
@@ -23,40 +23,40 @@ while isRunning:
     "4. Eliminar dato de la BD.\n\n" \
     "5. Cerrar aplicacion")
 
-    decision = int(input("\nSelect operation (1 - 5): "))
+    decision = int(input("\nSelecciona operacion (1 - 5): "))
 
     # Action based on decision
     if decision == 1:
         print("\nDatos de la BD:\n")
-        data = read_data.read_data()
+        data = operations.read_data()
 
         format_select(data)
 
     elif decision == 2:
         sensor_name = input("\nIngresa el nombre del sensor: ")
         data = float(input("Ingresa la data del sensor: "))
-        read_data.insert_data(sensor_name, data)
+        operations.insert_data(sensor_name, data)
         print("\nDato ingresado correctamente a la BD!")
 
     elif decision == 3:
-        data = read_data.read_data()
+        data = operations.read_data()
         format_select(data)
         home_id = input("\nIngresa el id del dato a actualizar: ")
         sensor_name = input("Ingresa el nombre del sensor a actualizar: ")
         data = float(input("Ingresa la data del sensor a actualizar: "))
-        read_data.update_data(sensor_name, data, home_id)
+        operations.update_data(sensor_name, data, home_id)
         print("\nDato actualizado correctamente!")
 
     elif decision == 4:
-        data = read_data.read_data()
+        data = operations.read_data()
         format_select(data)
 
         home_id = input("\nIngresa el id del dato a eliminar (entero): ")
-        read_data.delete_data(home_id)
+        operations.delete_data(home_id)
         print("\nDato eliminado correctamente!")
 
     else:
         print("\nGracias por usar la app, bye ;)")
-        read_data.cursor.close()
-        read_data.conn.close()
+        operations.cursor.close()
+        operations.conn.close()
         isRunning = False
