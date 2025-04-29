@@ -51,7 +51,7 @@ while isRunning:
         data = read_data.read_data()
         format_select(data)
 
-        home_id = int(input("\nIngresa el id del dato a eliminar (entero): "))
+        home_id = input("\nIngresa el id del dato a eliminar (entero): ")
         read_data.delete_data(home_id)
         print("\nDato eliminado correctamente!")
 
