@@ -5,12 +5,12 @@ conn = sqlite3.connect('database/home.db')
 cursor = conn.cursor()
 
 # Creation of table
-# cursor.execute('''
-# CREATE TABLE IF NOT EXISTS Homes (
-#    home_id INTEGER PRIMARY KEY AUTOINCREMENT,
-#    sensor_name TEXT NOT NULL,
-#    data DECIMAL(10, 2) NOT NULL)
-# ''')
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS Homes (
+    home_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    sensor_name TEXT NOT NULL,
+    data DECIMAL(10, 2) NOT NULL)
+''')
 
 
 # Insert data
