@@ -2,7 +2,7 @@
 An app that uses SQLite3 databases with a CRUD in Python and data load/lecture in C++.
 
 ## Table of Contents
-- [PaToDo List Backend](#patodo-list-backend)
+- [Prueba SQLite3 + Python + C++](#prueba-sqlite3-+python+-c++)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
